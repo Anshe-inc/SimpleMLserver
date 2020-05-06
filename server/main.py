@@ -17,7 +17,7 @@ def set_logger_settings():
 def main():
     app = web.Application()
     app['model'] = model.load()
-    app['config'] = config
+    app['config'] = config.CONFIG
 
     aiohttp_jinja2.setup(app, loader=jinja2.FileSystemLoader(config.CONFIG['templates_path']))
     router.assign_routes(app.router)
