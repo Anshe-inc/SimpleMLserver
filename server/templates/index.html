@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+
+<title>FlatPredictor</title>
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="templates/mycss.css">
+</head>
+
+<body>
+<h1>Predict house cost in Moscow</h1>
+<form action="/predict" method="post" accept-charset="utf-8" enctype="application/x-www-form-urlencoded">
+    <label for="totsp">Total flat space, m</label>
+    <input id="totsp" name="totsp" type="text" value="" autofocus required/><br/>
+    <label for="livesp">Living space, m</label>
+    <input id="livesp" name="livesp" type="text" value="" required/><br/>
+    <label for="kitsp">Kitchen space, m</label>
+    <input id="kitsp" name="kitsp" type="text" value="" required/><br/>
+    <label for="dist">Distance to underground, km</label>
+    <input id="dist" name="dist" type="text" value="" required/><br/>
+    <label for="code">District</label>
+    <select id="code" name="code">
+        <optgroup label="District">
+            <option value="1">NE</option>
+            <option value="2">N</option>
+            <option value="3">NW</option>
+            <option value="4">W</option>
+            <option value="6">SW</option>
+            <option value="5">S</option>
+            <option value="7">SE</option>
+            <option value="8">E</option>
+        </optgroup>
+    </select><br/>
+
+    <input type="submit" value="Predict!"/>
+</form><h1>{{ result }}</h1>
+</body>
+</html>

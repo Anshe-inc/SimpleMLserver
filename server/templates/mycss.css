@@ -1,0 +1,16 @@
+form {
+	border-left: 20px outset black;
+	border-right: 20px outset black;
+	padding: 30px;
+	text-align: left;
+	font-size: 36pt;
+	background-color: #ffff00;
+}
+
+select, input {
+    font-size: 36pt;
+}
+
+h1 {
+    font-size: 60pt;
+}
